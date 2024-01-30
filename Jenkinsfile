@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Project Repository') {
+        stage('Checkout do repositório secundario') {
             steps {
                 // Check out the project repository "repohml02.git"
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/cleversonbrsp/repohml02.git']]])
@@ -11,21 +11,21 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Building the project..."
+                echo "Building do projeto."
                 // Add your build commands here
             }
         }
 
         stage('Test') {
             steps {
-                echo "Testing the project..."
+                echo "Testando o projeto"
                 // Add your test commands here
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Deploying the project..."
+                echo "Deploy do projeto"
                 // Add your deploy commands here
             }
         }
