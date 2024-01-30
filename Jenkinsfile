@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout Project Repository') {
             steps {
                 // Check out the project repository "repohml02.git"
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/cleversonbrsp/repohml02.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/cleversonbrsp/repohml02.git']]])
             }
         }
 
